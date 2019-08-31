@@ -1,0 +1,25 @@
+
+GET http://localhost:3005/posts
+
+###
+POST http://localhost:3005/posts
+Content-Type: application/json
+
+{
+    "title": "My First Post",
+    "content": "My First Post Content"
+}
+
+###
+GET http://localhost:3005/posts/5d6a39a8c9d2ef34a71b877e
+
+### 
+PATCH  http://localhost:3005/posts/5d6a39a8c9d2ef34a71b877e?parent=5d6a39a8c9d2ef34a71b877e
+Content-Type: application/json
+
+{
+    "comment": {
+        "title": "Fifth Comment",
+        "content": "Fifth Comment on First Post"
+    }
+}
