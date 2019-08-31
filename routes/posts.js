@@ -63,6 +63,16 @@ router.patch('/:id', getPost, async (req, res) => {
     }
 })
 
+// Delete a Post
+router.delete('/:id', getPost, async (req, res) => {
+    try {
+        await res.post.remove()
+        res.json({ message: "Post Deleted" })
+    } catch(error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
 // Get a Post by id
 async function getPost(req, res, next) {
     try {

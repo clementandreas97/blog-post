@@ -6,20 +6,24 @@ POST http://localhost:3005/posts
 Content-Type: application/json
 
 {
-    "title": "My First Post",
-    "content": "My First Post Content"
+    "title": "My Second Post",
+    "content": "My Second Post Content"
 }
 
 ###
 GET http://localhost:3005/posts/5d6a39a8c9d2ef34a71b877e
 
 ### 
-PATCH  http://localhost:3005/posts/5d6a39a8c9d2ef34a71b877e?parent=5d6a39a8c9d2ef34a71b877e
+PATCH  http://localhost:3005/posts/5d6a8a8a4e7fa95386c6c2ee?parent=5d6a8a8a4e7fa95386c6c2ee
 Content-Type: application/json
 
 {
     "comment": {
-        "title": "Fifth Comment",
-        "content": "Fifth Comment on First Post"
+        "title": "First Comment",
+        "content": "First Comment on Second Post"
     }
 }
+
+###
+
+DELETE http://localhost:3005/posts/5d6a88fc4e7fa95386c6c2ed
