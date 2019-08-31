@@ -6,8 +6,8 @@ POST http://localhost:3005/posts
 Content-Type: application/json
 
 {
-    "title": "My Second Post",
-    "content": "My Second Post Content"
+    "title": "My First Post",
+    "content": "My First Post Content"
 }
 
 ###
