@@ -4,9 +4,10 @@ const express = require('express')
 const router = express.Router()
 const Post = require('../models/post')
 const Comment = require('../models/comment')
+const expressJWT = require('express-jwt')
 
 // Get all posts
-router.get('/', PostController.getAll)
+router.get('/', PostController.cachePosts, PostController.getAll)
 
 // Get a post
 router.get('/:id', getPost, (req, res) => {

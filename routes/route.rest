@@ -14,13 +14,13 @@ Content-Type: application/json
 GET http://localhost:3005/posts/5d6a39a8c9d2ef34a71b877e
 
 ### 
-PATCH  http://localhost:3005/posts/5d6a8a8a4e7fa95386c6c2ee?parent=5d6a8a8a4e7fa95386c6c2ee
+PATCH  http://localhost:3005/posts/5d6a9f80f8b56066030bf298?parent=5d6a9f80f8b56066030bf298
 Content-Type: application/json
 
 {
     "comment": {
         "title": "First Comment",
-        "content": "First Comment on Second Post"
+        "content": "First Comment on First Post"
     }
 }
 

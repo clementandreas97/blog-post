@@ -8,6 +8,9 @@ const chai = require('chai')
 const chaiHttp = require('chai-http')
 const server = require('../server')
 
+const redis = require('redis')
+const clientTest = redis.createClient(process.env.REDIS_PORT)
+
 const should = chai.should()
 
 chai.use(chaiHttp)
@@ -15,6 +18,8 @@ chai.use(chaiHttp)
 describe('Posts', () => {
     // Clear Database before each tests
     beforeEach((done) => {
+        clientTest.del('posts', (err, res) => {
+        })
         Post.remove({}, (error) => {
             done()
         })
